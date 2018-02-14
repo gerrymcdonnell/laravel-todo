@@ -32,6 +32,7 @@
                 </div>
 
                 <div class="links">
+                    {{ link_to('foo/bar', $title = null, $attributes = array(), $secure = null) }}
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
