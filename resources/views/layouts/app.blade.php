@@ -15,24 +15,26 @@
 
     <body>
 
-        <!-- content goes here -->
 
-<div class="container">
 
-    <div class="row">
-        <div class="col-md-8 col-lg-8">
-            @yield('content')
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-8 col-lg-8">
+                <!-- content goes here -->
+                @yield('content')
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+
+            </div>
         </div>
 
-        <div class="col-md-4 col-lg-4">
-
-        </div>
     </div>
 
-</div>
-
     <footer id="footer" class="text-center">
-        <p>Copyright &; 2018</p>
+        <p>Copyright &copy 2018</p>
     </footer>
 
     </body>
