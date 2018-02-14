@@ -11,6 +11,13 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+//point to index action ofr todos contrller
+Route::get('/', 'TodosController@index');
+
+Route::resource('todo','TodosController');
+
