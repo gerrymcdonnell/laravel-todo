@@ -90,7 +90,12 @@ class TodosController extends Controller
      */
     public function edit($id)
     {
-        //
+        //get the record
+        $todo=Todo::find($id);
+
+        //return the view and pass in the todo variable
+        return view('todos.edit')
+            ->with('todo',$todo);
     }
 
     /**
@@ -102,7 +107,19 @@ class TodosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $todo=Todo::find($id);
+
+        //get the input
+        $todo->text=$request->input('text');
+        $todo->body=$request->input('body');
+        $todo->due=$request->input('due');
+
+        //save it
+        $todo->save();
+
+        //flash message and redirect
+        return redirect('/')
+            ->with('success','Todo updated');
     }
 
     /**
