@@ -161,6 +161,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //add formservice provider
+        App\Providers\FormServiceProvider::class,
+
     ],
 
     /*

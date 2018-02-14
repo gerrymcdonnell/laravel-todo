@@ -12,8 +12,8 @@
             <a class="nav-link" href="/">Home</a>
           </li>
 
-            <li class="{{Request::is('/todos.create') ? 'nav-item active' : '' }}">
-              <a class="nav-link" href="/todos.create">create</a>
+            <li class="{{Request::is('todo/create') ? 'nav-item active' : '' }}">
+              <a class="nav-link" href="/todo/create">create</a>
             </li>
 
 
