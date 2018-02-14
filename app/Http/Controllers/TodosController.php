@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//use model
+use App\Todo;
+
 class TodosController extends Controller
 {
     /**
@@ -13,7 +16,8 @@ class TodosController extends Controller
      */
     public function index()
     {
-        //
+        $todos=Todo::all();
+        var_dump($todos);
     }
 
     /**
