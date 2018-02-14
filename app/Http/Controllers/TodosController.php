@@ -18,6 +18,10 @@ class TodosController extends Controller
     {
         $todos=Todo::all();
         //var_dump($todos);
+
+        //orderby
+        $todos=Todo::orderBy('created_at','desc')->get();
+
         return view('todos.index')->with('todos',$todos);
     }
 
@@ -50,7 +54,12 @@ class TodosController extends Controller
      */
     public function show($id)
     {
-        //
+        //get the record
+        $todo=Todo::find($id);
+
+        //return the view and pass in the todo variable
+        return view('todos.show')
+            ->with('todo',$todo);
     }
 
     /**
