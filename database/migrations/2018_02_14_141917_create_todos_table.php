@@ -22,6 +22,8 @@ class CreateTodosTable extends Migration
 
             $table->timestamps();
         });
+
+        $this->insertTodos();
     }
 
     /**
@@ -32,5 +34,29 @@ class CreateTodosTable extends Migration
     public function down()
     {
         Schema::dropIfExists('todos');
+    }
+
+    public function insertTodos(){
+        //setup default user
+
+        $rows = [
+            [
+                'text'=>'first to do',
+                'body'=>'blah blah bah',
+                'due'=>'friday',
+                'created_at'=>date('Y-m-d G:i:s'),
+                'updated_at'=>date('Y-m-d G:i:s')
+            ],
+            [
+                'text'=>'second to do',
+                'body'=>'blah blah bah',
+                'due'=>'sunday',
+                'created_at'=>date('Y-m-d G:i:s'),
+                'updated_at'=>date('Y-m-d G:i:s')
+            ]
+
+        ];
+        // insert records
+        DB::table('todos')->insert($rows);
     }
 }
