@@ -30,9 +30,10 @@ class TodosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //handles displaying the form
     public function create()
     {
-        //
+        return view('todos.create');
     }
 
     /**
