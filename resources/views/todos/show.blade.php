@@ -23,4 +23,16 @@
     <br>
     <br>
     <a href="/todo/{{$todo->id}}/edit" class="btn btn-default">Edit</a>
+
+        <!--delete -->
+        {!! Form::open(['action' => ['TodosController@destroy',$todo->id],
+        'method'=>'post',
+        'class'=>'float-xs-right']) !!}
+
+            <!--hidden field for method=put-->
+            {{Form::hidden('_method','DELETE')}}
+            {{Form::bsSubmit('delete me',['class'=>'btn btn-danger'])}}
+
+        {!! Form::close() !!}
+
     @endsection

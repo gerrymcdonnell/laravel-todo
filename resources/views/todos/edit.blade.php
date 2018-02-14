@@ -14,8 +14,8 @@
 
         {{Form::bsText('due',$todo->due)}}
 
-        //hidden field for method=put
-         {{Form::hidden('_method','PUT')}}
+        <!--hidden field for method=put-->
+        {{Form::hidden('_method','PUT')}}
 
         {{Form::bsSubmit('Edit me',['class'=>'btn btn-primary'])}}
 
