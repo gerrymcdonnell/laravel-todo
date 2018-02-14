@@ -7,9 +7,9 @@
 
         {{Form::bsText('text')}}
 
+        {{Form::bsTextArea('body')}}
 
-
-
+        {{Form::bsText('due')}}
 
     {!! Form::close() !!}
 
