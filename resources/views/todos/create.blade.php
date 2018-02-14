@@ -11,6 +11,8 @@
 
         {{Form::bsText('due')}}
 
+        {{Form::bsSubmit('submit me',['class'=>'btn btn-primary'])}}
+
     {!! Form::close() !!}
 
 @endsection
